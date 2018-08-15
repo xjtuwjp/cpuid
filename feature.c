@@ -288,7 +288,7 @@ static const struct cpu_feature_t features [] = {
 /*	{ 0x00000007, 0, REG_EDX, 0x02000000, VENDOR_INTEL | VENDOR_AMD                   , ""}, */   /* Reserved */
 	{ 0x00000007, 0, REG_EDX, 0x04000000, VENDOR_INTEL                                , "Speculation Control (IBRS and IBPB)"},
 	{ 0x00000007, 0, REG_EDX, 0x08000000, VENDOR_INTEL                                , "Single Thread Indirect Branch Predictors (STIBP)"},
-/*	{ 0x00000007, 0, REG_EDX, 0x10000000, VENDOR_INTEL | VENDOR_AMD                   , ""}, */   /* Reserved */
+	{ 0x00000007, 0, REG_EDX, 0x10000000, VENDOR_INTEL | VENDOR_AMD                   , "L1D_FLUSH support"},  
 	{ 0x00000007, 0, REG_EDX, 0x20000000, VENDOR_INTEL                                , "IA32_ARCH_CAPABILITIES MSR"},
 /*	{ 0x00000007, 0, REG_EDX, 0x40000000, VENDOR_INTEL | VENDOR_AMD                   , ""}, */   /* Reserved */
 	{ 0x00000007, 0, REG_EDX, 0x80000000, VENDOR_INTEL                                , "Speculative Store Bypass Disable (SSBD)"},
@@ -672,8 +672,8 @@ static const struct cpu_feature_t features [] = {
 /*	{ 0x80000008, 0, REG_EBX, 0x00000800,                VENDOR_AMD                   , ""}, */   /* Reserved */
 	{ 0x80000008, 0, REG_EBX, 0x00001000,                VENDOR_AMD                   , "Indirect Branch Prediction Barrier (IBPB)"},
 /*	{ 0x80000008, 0, REG_EBX, 0x00002000,                VENDOR_AMD                   , ""}, */   /* Reserved */
-/*	{ 0x80000008, 0, REG_EBX, 0x00004000,                VENDOR_AMD                   , "Indirect Branch Restricted Speculation (IBRS)"},
-/*	{ 0x80000008, 0, REG_EBX, 0x00008000,                VENDOR_AMD                   , "Single Thread Indirect Branch Predictor (STIBP)"},
+	{ 0x80000008, 0, REG_EBX, 0x00004000,                VENDOR_AMD                   , "Indirect Branch Restricted Speculation (IBRS)"},
+	{ 0x80000008, 0, REG_EBX, 0x00008000,                VENDOR_AMD                   , "Single Thread Indirect Branch Predictor (STIBP)"},
 /*	{ 0x80000008, 0, REG_EBX, 0x00010000,                VENDOR_AMD                   , ""}, */   /* Reserved */
 /*	{ 0x80000008, 0, REG_EBX, 0x00020000,                VENDOR_AMD                   , ""}, */   /* Reserved */
 /*	{ 0x80000008, 0, REG_EBX, 0x00040000,                VENDOR_AMD                   , ""}, */   /* Reserved */
